@@ -1,0 +1,43 @@
+
+	<div class="row">
+		<div class="col">
+			<img class="img-responsive static-img" src="src/images/gym.jpg" alt="gym">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<h1 class="arm-header"> INDEX OF EXERCISES </h1>
+			<hr>
+			<button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button>
+			<hr>
+				<dl class="arm-ul">
+					<dt class="arm-list" ng-repeat="(id, workout) in arm.completeArmsObj">
+						<button class="list-group-item results-button" ng-click="showExercises = ! showExercises">{{workout.WORKOUT}}</button>
+							<dl ng-show="showExercises"> 
+								<dt ng-repeat="(id, exercise) in workout.EXERCISES"> 
+					  			<div class="row">
+					  				<div class="well well-sm col">
+										<table class="table table-bordered">
+										<tbody>
+											<tr class="danger"><th>Exercise</th>
+																<th> Sets </th>
+																<th> # of Reps </th>
+																<th>Notes</th>
+											</tr>
+											<tr>
+												<td>{{exercise.EXERCISE}}</td>
+												<td>{{exercise.SETS}}</td>
+												<td>{{exercise.REPS}} </td>
+												<td>{{exercise.NOTES}}</td>
+											</tr>
+										</tbody>
+					 			</dt>
+			 				</dl>
+			 		  					</table>
+			 		  			</div>
+			 		  		</div>
+		 			</dt>
+				</dl>
+		</div>
+	</div> 
