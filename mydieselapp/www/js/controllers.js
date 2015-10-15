@@ -8,9 +8,17 @@ angular
      var vm = this;
 })
 
+.controller('landingCtrl', function() {
+	
+	var vm = this;
+})
+
+
 .controller('ArmCtrl', function(Pump, $scope) {
      var vm = this;
-
+	 // $http.get('http://0.0.0.0:8000/arms').then(function(response) {
+	 // 	console.log(response)
+	 // });
      vm.deezArms = function () {
      	var data = Pump.getArms();
      	vm.arms = data.val()

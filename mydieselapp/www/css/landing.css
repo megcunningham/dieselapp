@@ -1,14 +1,6 @@
-/* Empty. Add your own CSS if you like */
-@import url(/css/trainingIndex.css);
-@import url(/css/landing.css);
 
 
-
-.landing-body {
-	backgroundcolor: red;
-}
-
-.image {
+/*.image {
     background: url(../img/diesel.jpg);
     background-repeat: no-repeat;
     background-size: contain;
@@ -18,6 +10,4 @@
     margin: auto;
     z-index: 2;
     position: relative;
-}
-
-
+}*/

@@ -11,16 +11,22 @@ angular
       })
       .state('index', {
         url: "/index",
-        templateUrl: 'templates/trainingIndex.html',
-        controller: 'trainingIndexCtrl'
+          templateUrl: 'templates/trainingIndex.html',
+          controller: 'trainingIndexCtrl',
       })
 
       .state('armPage', {
         url: "/arms",
-        templateUrl:'templates/armPage.html',
-        controller: 'ArmCtrl',
-        controllerAs: 'arm'
+          templateUrl:'templates/armPage.html',
+          controller: 'ArmCtrl',
+          controllerAs: 'arm'
        })
+	   
+	   .state('landing', {
+		 url: "/landing",
+		   templateUrl: 'templates/landing.html',
+		   controller: 'landingCtrl'
+	   })
 
       // .when('/backlist', {
       //   templateUrl:'www/templates/backPage.html',
