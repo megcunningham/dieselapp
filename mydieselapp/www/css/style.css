@@ -2,22 +2,31 @@
 @import url(/css/trainingIndex.css);
 @import url(/css/landing.css);
 
-
-
-.landing-body {
-	backgroundcolor: red;
+.image {
+	border-radius:15px;
+	border-style: ridge;
+	border-color:red;
 }
 
-.image {
-    background: url(../img/diesel.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    width: 80%;
-    height: 246px;
-    margin: auto;
-    z-index: 2;
-    position: relative;
+.img-responsive{
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1px;
+	margin-top: 3px;
+	border-radius: 2px;
+	border-style: ridge;
+	border-color: red;
+	
+}
+
+body {
+	background-color: rgb(184, 0, 0);
+}
+
+h3 {
+	font-family: 'Anton', sans-serif;
+	/*text-shadow: 1px 1px black;*/
+	text-align: center;
 }
 
 

@@ -1,4 +1,8 @@
-
+/*.img-responsive{
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}*/
 
 /*.image {
     background: url(../img/diesel.jpg);
@@ -11,3 +15,49 @@
     z-index: 2;
     position: relative;
 }*/
+
+.landing-welcome {
+	font-family: 'Special Elite', cursive;
+	text-shadow: 1px 1px lightgrey;
+	text-align: center;
+	font-weight: bolder;
+}
+
+.landing-btns {
+	border-width: 2px;
+	text-align: center;
+	color: rgb(184, 0, 0);
+	text-shadow: 2px 1px dimgrey;
+	border-color: lightgrey;
+	border-width: 2px;
+	font-family: 'Anton', sans-serif;
+	font-size: 25px;
+	background-color: gainsboro;
+	/*margin: 5px;*/
+/*	padding-top: 6px;
+	padding-bottom: 6px;*/
+	box-shadow: 4px 4px 2px black;
+	border-radius: 20;
+	background-image: url('/img/blackdiamondplate.jpeg');
+}
+
+.landing-btns a:link{
+	text-decoration: none;
+}
+
+.landing-btns a:visited{
+	text-decoration: none;
+	/*color: rgb(184, 0, 0);*/
+	text-shadow: 2px 1px dimgrey;
+}
+
+.landing-btns a {
+	color: lightgrey;
+	text-border: red;
+	text-shadow: 2px 1px black;
+}
+
+.website a {
+	color: crimson;
+	text-shadow: 2px 1px white;
+}
