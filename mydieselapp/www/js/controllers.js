@@ -13,12 +13,17 @@ angular
 	var vm = this;
 })
 
+.controller('weeklyCtrl', function() {
+	
+	var vm = this;
+})
 
-.controller('ArmCtrl', function(Pump, $scope) {
+
+.controller('ArmCtrl', function(Pump, $scope, $http) {
      var vm = this;
-	 // $http.get('http://0.0.0.0:8000/arms').then(function(response) {
-	 // 	console.log(response)
-	 // });
+	 $http.get('http://localhost:8000/arms').then(function(response) {
+	 	console.log(response)
+	 });
      vm.deezArms = function () {
      	var data = Pump.getArms();
      	vm.arms = data.val()

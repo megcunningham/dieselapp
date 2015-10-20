@@ -1,7 +1,8 @@
 angular
   .module('dieselApp')
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+	$httpProvider.defaults.withCredentials = true;
     $stateProvider
        .state('login', {
           url: "/login",
@@ -9,24 +10,27 @@ angular
             controller: 'AuthCtrl',
             controllerAs: 'auth'
       })
-      .state('index', {
-        url: "/index",
-          templateUrl: 'templates/trainingIndex.html',
-          controller: 'trainingIndexCtrl',
-      })
-
-      .state('armPage', {
-        url: "/arms",
-          templateUrl:'templates/armPage.html',
-          controller: 'ArmCtrl',
-          controllerAs: 'arm'
-       })
-	   
 	   .state('landing', {
 		 url: "/landing",
 		   templateUrl: 'templates/landing.html',
 		   controller: 'landingCtrl'
 	   })
+      .state('index', {
+        url: "/index",
+          templateUrl: 'templates/trainingIndex.html',
+          controller: 'trainingIndexCtrl',
+      }) 
+	   .state('weekly', {
+		 url: "/weekly",
+		   templateUrl: 'templates/weeklyWorkout.html',
+		   controller: 'weeklyCtrl'
+	   })  
+       .state('armPage', {
+         url: "/arms",
+           templateUrl:'templates/armPage.html',
+           controller: 'ArmCtrl',
+           controllerAs: 'arm'
+        })
 
       // .when('/backlist', {
       //   templateUrl:'www/templates/backPage.html',

@@ -4,7 +4,7 @@
 			<img class="img-responsive static-img" src="src/images/gym.jpg" alt="gym">
 		</div>
 	</div> -->
-<div class="arm-body">
+<!-- <div class="arm-body">
 	<div class="row responsive">
 		<div class="col">
 			<ion-list>
@@ -14,31 +14,32 @@
 		</ion-list>
 			</div>
 		</div>
-	</div>
-		<div class="row responsive">
+	</div> -->
+		<!-- <div class="row responsive">
 			<div class="col">
 				<ion-list>
-					<ion-item ng-repeat="(id, workout) in arm.completeArmsObj">
-					 {{workout.WORKOUT}}
+					<ion-item ng-repeat="arm.listArms()">
+					arms
 					</ion-item>
+					<ion-item ng-click="showExercises = ! showExercises">
+					{{workout.WORKOUT}}
+				</ion-item>
 				</ion-list>
 			</div>
 		</div>
-</div>
+</div>  -->
 				
 				
+	<h3 class="landing-welcome"> Arms Collection </h3>			
 				
 				
-				
-				
-			<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button>
-			<hr>
-				<dl class="arm-ul">
-					<dt class="arm-list" ng-repeat="(id, workout) in arm.completeArmsObj">
-						<button class="list-group-item results-button" ng-click="showExercises = ! showExercises">{{workout.WORKOUT}}</button>
-							<dl ng-show="showExercises">
-								<dt ng-repeat="(id, exercise) in workout.EXERCISES">
-					  			<div class="row">
+			<div ng-model="arms.WORKOUT">	
+			<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button> -->
+					<ul class="arm-list" ng-repeat="(id, workout) in arm.completeArmsObj">
+						<!-- <li class="list-group-item results-button" ng-click="showExercises = ! 							showExercises">{{workout.WORKOUT}}</li>
+							<ul ng-show="showExercises">
+								<li ng-repeat="(id, exercise) in workout.EXERCISES"> -->
+					  			<!-- <div class="row">
 					  				<div class="well well-sm col">
 										<table class="table table-bordered">
 										<tbody>
@@ -53,13 +54,13 @@
 												<td>{{exercise.REPS}} </td>
 												<td>{{exercise.NOTES}}</td>
 											</tr>
-										</tbody>
-					 			</dt>
-			 				</dl>
-			 		  					</table>
+										</tbody> -->
+					 			</li>
+							</ul>
+			 		  					<!-- </table>
 			 		  			</div>
-			 		  		</div>
-		 			</dt>
-				</dl>
+			 		  		</div> -->
+		 			</li>
+			</ul>
 		</div>
-	</div>  -->
+	</div>
