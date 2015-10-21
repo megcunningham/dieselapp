@@ -1,4 +1,4 @@
-
+<ion-scroll zooming="false" has-bouncing="true" direction="xy">
 	<!-- <div class="row">
 		<div class="col">
 			<img class="img-responsive static-img" src="src/images/gym.jpg" alt="gym">
@@ -33,9 +33,11 @@
 	<h3 class="landing-welcome"> Arms Collection </h3>			
 				
 				
-			<div ng-model="arms.WORKOUT">	
+			<div ng-model="arm.listArms">	
 			<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button> -->
-					<ul class="arm-list" ng-repeat="(id, workout) in arm.completeArmsObj">
+					<ion-list class="arm-list" ng-repeat="(Workouts, workout_name) in Workouts.completeArmsObj">
+						<ion-item>{{Workouts.workout_name}}</ion-item>
+					</ion-list>
 						<!-- <li class="list-group-item results-button" ng-click="showExercises = ! 							showExercises">{{workout.WORKOUT}}</li>
 							<ul ng-show="showExercises">
 								<li ng-repeat="(id, exercise) in workout.EXERCISES"> -->
@@ -64,3 +66,4 @@
 			</ul>
 		</div>
 	</div>
+</ion-scroll>

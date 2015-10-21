@@ -13,24 +13,34 @@ angular
 	var vm = this;
 })
 
-.controller('weeklyCtrl', function() {
-	
+.controller('weeklyCtrl', function(Pump, $scope) {
 	var vm = this;
+	// vm.weeklySplits = function () {
+	// 	Pump.getWeekly(function (response) {
+	// 		vm.weekly = response;
+	// 	});
+	// }
+	//
+	// vm.listweekly = function() {
+	// 	var ref = ('http://localhost:8000/weekly/');
+
+
+	// }
 })
 
 
-.controller('ArmCtrl', function(Pump, $scope, $http) {
+.controller('ArmCtrl', function(Pump, $scope) {
      var vm = this;
-	 $http.get('http://localhost:8000/arms').then(function(response) {
-	 	console.log(response)
-	 });
      vm.deezArms = function () {
-     	var data = Pump.getArms();
-     	vm.arms = data.val()
+     	Pump.getArms(function (response) {
+     		vm.arms = response;
+			console.log(vm.arms);
+     	});
+     	
      }
 
      vm.listArms = function() {
-       var ref = new Firebase('https://mobiletrainerapp.firebaseio.com/admin/users/targetgroup/arms');
+       var ref = ('http://localhost:8000/arms/');
 
        ref.once('value', function(dataSnapshot) {
        vm.completeArmsObj = dataSnapshot.val();   

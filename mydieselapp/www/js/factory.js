@@ -3,11 +3,11 @@ angular
 
 // fetching firebase data
 
-	.factory('Pump', function (T_APP) {
+	.factory('Pump', function (backend) {
 		return {
 			getArms(cb) {
 				$http
-					.get(T_APP + 'targetgroup/arms')
+					.get(backend + 'arms')
 					.success(cb)
 			},
 			getBack(cb) {
@@ -28,6 +28,11 @@ angular
             getShoulders(cb) {
 				$http
 					.get(T_APP + 'targetgroup/shoulders')
+					.success(cb)
+			},
+			getWeekly(cb) {
+				$http
+					.get(backend + 'weekly')
 					.success(cb)
 			}
 

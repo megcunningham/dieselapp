@@ -22,8 +22,9 @@ angular
       }) 
 	   .state('weekly', {
 		 url: "/weekly",
-		   templateUrl: 'templates/weeklyWorkout.html',
-		   controller: 'weeklyCtrl'
+		   templateUrl: 'templates/weeklyWorkouts.html',
+		   controller: 'weeklyCtrl',
+		   controllerAs: 'weekly'
 	   })  
        .state('armPage', {
          url: "/arms",

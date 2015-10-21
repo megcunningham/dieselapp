@@ -4,7 +4,8 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('dieselApp', ['ionic'])
-		.constant('T_APP', 'https://mobiletrainerapp.firebaseio.com/admin/users/');
+		// .constant('T_APP', 'https://mobiletrainerapp.firebaseio.com/admin/users/')
+		.constant('backend', 'http://localhost:8000/');
 		
 
 // .run(function($ionicPlatform) {
