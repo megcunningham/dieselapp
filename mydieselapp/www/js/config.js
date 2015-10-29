@@ -2,7 +2,7 @@ angular
   .module('dieselApp')
 
   .config(function($stateProvider, $urlRouterProvider, $httpProvider) {
-	$httpProvider.defaults.withCredentials = true;
+	// $httpProvider.defaults.withCredentials = true;
     $stateProvider
        .state('login', {
           url: "/login",
@@ -11,10 +11,10 @@ angular
             controllerAs: 'auth'
       })
 	   .state('landing', {
-		 url: "/landing",
+		 url: "/",
 		   templateUrl: 'templates/landing.html',
-		   controller: 'landingCtrl'
-	   })
+		   controller: 'LandingCtrl'
+	  })
       .state('index', {
         url: "/index",
           templateUrl: 'templates/trainingIndex.html',
@@ -23,38 +23,38 @@ angular
 	   .state('weekly', {
 		 url: "/weekly",
 		   templateUrl: 'templates/weeklyWorkouts.html',
-		   controller: 'weeklyCtrl',
+		   controller: 'WeeklyCtrl',
 		   controllerAs: 'weekly'
-	   })  
-       .state('armPage', {
+	  })  
+       .state('arms', {
          url: "/arms",
            templateUrl:'templates/armPage.html',
            controller: 'ArmCtrl',
            controllerAs: 'arm'
-        })
-
-      // .when('/backlist', {
-      //   templateUrl:'www/templates/backPage.html',
-      //   controller: 'BackCtrl',
-      //   controllerAs: 'back'
-      // })
-
-      // .when('/chestlist', {
-      //   templateUrl:'www/templates/chestPage.html',
-      //   controller: 'ChestCtrl',
-      //   controllerAs: 'chest'
-      // })
-
-      // .when('/leglist', {
-      //   templateUrl:'www/templates/legPage.html',
-      //   controller: 'LegCtrl',
-      //   controllerAs: 'leg'
-      // })
-
-      // .when('/shoulderlist', {
-      //   templateUrl:'www/templates/shoulderPage.html',
-      //   controller: 'ShoulderCtrl',
-      //   controllerAs: 'shoulder'
-      // });
-
+      })
+       .state('back', {
+          url: "/back",
+            templateUrl:'templates/backPage.html',
+            controller: 'BackCtrl',
+            controllerAs: 'back'
+       })
+        .state('chest', {
+          url: "/chest",
+            templateUrl:'templates/chestPage.html',
+            controller: 'ChestCtrl',
+            controllerAs: 'chest'
+       })
+        .state('shoulder', {
+           url: "/shoulders",
+             templateUrl:'templates/shoulderPage.html',
+             controller: 'ShoulderCtrl',
+             controllerAs: 'shoulders'
+       })
+        .state('legs', {
+           url: "/legs",
+             templateUrl:'templates/legPage.html',
+             controller: 'LegCtrl',
+             controllerAs: 'legs'
+         })
+	 $urlRouterProvider.otherwise('/');
     });

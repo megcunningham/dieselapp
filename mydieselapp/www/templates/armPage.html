@@ -35,8 +35,8 @@
 				
 			<div ng-model="arm.listArms">	
 			<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button> -->
-					<ion-list class="arm-list" ng-repeat="(Workouts, workout_name) in Workouts.completeArmsObj">
-						<ion-item>{{Workouts.workout_name}}</ion-item>
+					<ion-list class="arm-list" ng-repeat="(id, workout_name) in workout_name.completeArmsObj">
+						<ion-item>{{workout_name}}</ion-item>
 					</ion-list>
 						<!-- <li class="list-group-item results-button" ng-click="showExercises = ! 							showExercises">{{workout.WORKOUT}}</li>
 							<ul ng-show="showExercises">

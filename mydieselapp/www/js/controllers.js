@@ -4,16 +4,14 @@ angular
 // controllers - placing factory cb to be viewed
 
 .controller('trainingIndexCtrl', function() {
-
-     var vm = this;
-})
-
-.controller('landingCtrl', function() {
-	
 	var vm = this;
 })
 
-.controller('weeklyCtrl', function(Pump, $scope) {
+.controller('LandingCtrl', function() {
+	var vm = this;
+})
+
+.controller('WeeklyCtrl', function(Pump, $scope) {
 	var vm = this;
 	// vm.weeklySplits = function () {
 	// 	Pump.getWeekly(function (response) {
@@ -38,9 +36,9 @@ angular
      	});
      	
      }
-
+	 vm.deezArms();
      vm.listArms = function() {
-       var ref = ('http://localhost:8000/arms/');
+       var ref = ('Backend' + 'arms');
 
        ref.once('value', function(dataSnapshot) {
        vm.completeArmsObj = dataSnapshot.val();   

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('dieselApp', ['ionic'])
 		// .constant('T_APP', 'https://mobiletrainerapp.firebaseio.com/admin/users/')
-		.constant('backend', 'http://localhost:8000/');
+		.constant('Backend', {url: 'http://localhost:8000/api'});
 		
 
 // .run(function($ionicPlatform) {
