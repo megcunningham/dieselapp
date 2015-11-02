@@ -33,10 +33,10 @@
 	<h3 class="landing-welcome"> Arms Collection </h3>			
 				
 				
-			<div ng-model="arm.listArms">	
+			<div ng-model="arm.Arms">	
 			<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button> -->
-					<ion-list class="arm-list" ng-repeat="(id, workout_name) in workout_name.completeArmsObj">
-						<ion-item>{{workout_name}}</ion-item>
+					<ion-list class="arm-list" ng-repeat="(Arms, workout_name) in Arms.workout_name">
+						<ion-item>{{Arms.workout_name}}</ion-item>
 					</ion-list>
 						<!-- <li class="list-group-item results-button" ng-click="showExercises = ! 							showExercises">{{workout.WORKOUT}}</li>
 							<ul ng-show="showExercises">

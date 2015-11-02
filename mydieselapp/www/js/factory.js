@@ -7,35 +7,12 @@ angular
 	console.log('Backend', Backend)
 	
 	this.getArms = function () {
-		return $http.get(Backend.url + '/arms')
-		.then(function(data) {
-				console.log('Got some data: ', data);
-				return data;
-			});
+	  return $http.get(Backend.url + '/arms');
 	};
+	
 	return this;
+	console.log('This', this);
 	});
-
-
-// .factory('Pump', function ($http, backend) {
-// 	var factory = [];
-// 			factory.getArms = function() {
-// 				$http({
-// 					url: 'backend' + 'arms',
-// 					method: 'GET'
-// 				})
-// 				.then(function successCallback(response) {
-// 					factory.getArms = response;
-// 				}, function errorCallback(response) {
-// 					factory.getArms = response;
-// 				});
-//
-// 				return factory.getArms;
-// 			};
-//
-// 			return factory;
-// 		});
-					
 			
 			// getBack(cb) {
 			// 	$http

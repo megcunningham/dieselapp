@@ -13,37 +13,30 @@ angular
 
 .controller('WeeklyCtrl', function(Pump, $scope) {
 	var vm = this;
-	// vm.weeklySplits = function () {
-	// 	Pump.getWeekly(function (response) {
-	// 		vm.weekly = response;
-	// 	});
-	// }
-	//
-	// vm.listweekly = function() {
-	// 	var ref = ('http://localhost:8000/weekly/');
-
-
-	// }
+// 	vm.weeklyWorkouts = function() {
+// 		Pump.
+// 	}
 })
 
 
 .controller('ArmCtrl', function(Pump, $scope) {
      var vm = this;
-     vm.deezArms = function () {
-     	Pump.getArms(function (response) {
-     		vm.arms = response;
-			console.log(vm.arms);
-     	});
-     	
-     }
+     vm.deezArms = function () { 
+     	Pump.getArms()
+			.then(function(response) {
+				vm.Arms = response;
+				console.log('response', response)
+			});
+     };
 	 vm.deezArms();
-     vm.listArms = function() {
-       var ref = ('Backend' + 'arms');
-
-       ref.once('value', function(dataSnapshot) {
-       vm.completeArmsObj = dataSnapshot.val();   
-      });
-   }
+	 
+   //   vm.listArms = function() {
+   //     var ref = ('Backend' + 'arms');
+   // 	   console.log('i made it this far');
+   //     ref.once('value', function(dataSnapshot) {
+   //     vm.completeArmsObj = dataSnapshot.val();
+   //    });
+   // }
 })
 
 .controller('BackCtrl', function(Pump, $scope) {
