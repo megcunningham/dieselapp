@@ -13,9 +13,14 @@ angular
 
 .controller('WeeklyCtrl', function(Pump, $scope) {
 	var vm = this;
-// 	vm.weeklyWorkouts = function() {
-// 		Pump.
-// 	}
+	vm.weeklyWorkouts = function() {
+		Pump.getWeekly()
+			.then(function(response) {
+				vm.Weekly = response;
+				console.log('response', response);
+			});
+	};
+	vm.weeklyWorkouts();
 })
 
 
@@ -41,19 +46,14 @@ angular
 
 .controller('BackCtrl', function(Pump, $scope) {
      var vm = this;
-
      vm.datBack = function () {
-     	var data = Pump.getBack();
-     	vm.back = data.val()
-     }
-
-      vm.listBack = function() {
-          var ref = new Firebase('https://mobiletrainerapp.firebaseio.com/admin/users/targetgroup/back');
-
-          ref.once('value', function(dataSnapshot) {
-               vm.completeBackObj = dataSnapshot.val();   
-          });
-     }
+     	Pump.getBack()
+			.then(function(response) {
+				vm.Back = response;
+				console.log('response', response)
+			});
+	 };
+	 vm.datBack();
 
 })
 
@@ -61,17 +61,13 @@ angular
      var vm = this;
 
      vm.disChest = function () {
-     	var data = Pump.getChest();
-     	vm.chest = data.val()
-     }
-
-     vm.listChest = function() {
-          var ref = new Firebase('https://mobiletrainerapp.firebaseio.com/admin/users/targetgroup/chest');
-
-          ref.once('value', function(dataSnapshot) {
-               vm.completeChestObj = dataSnapshot.val();   
-          });
-     }
+	  	Pump.getChest()
+			.then(function(response) {
+				vm.Chest = response;
+				console.log('response', response)
+			});
+	 };
+	 vm.disChest();
 
 })
 
@@ -79,34 +75,25 @@ angular
      var vm = this;
 
      vm.demLegs = function () {
-     	var data = Pump.getLegs();
-     	vm.legs = data.val()
-     }
-
-      vm.listLegs = function() {
-          var ref = new Firebase('https://mobiletrainerapp.firebaseio.com/admin/users/targetgroup/legs');
-
-          ref.once('value', function(dataSnapshot) {
-               vm.completeLegsObj = dataSnapshot.val();   
-          });
-     }
-
+	  	Pump.getLegs()
+			.then(function(response) {
+				vm.Legs = response;
+				console.log('response', response)
+			});
+	 };
+	 vm.demLegs();
 })
 
 .controller('ShoulderCtrl', function(Pump, $scope) {
      var vm = this;
 
      vm.doesShoulders = function () {
-     	var data = Pump.getShoulders();
-     	vm.shoulders = data.val()
-     }
-
-     vm.listShoulders = function() {
-          var ref = new Firebase('https://mobiletrainerapp.firebaseio.com/admin/users/targetgroup/shoulders');
-
-          ref.once('value', function(dataSnapshot) {
-               vm.completeShouldersObj = dataSnapshot.val();   
-          });
-     }
+	  	Pump.getShoulders()
+			.then(function(response) {
+				vm.Shoulders = response;
+				console.log('response', response)
+			});
+	 };
+	 vm.doesShoulders();
 
 })

@@ -21,7 +21,7 @@ angular
           controller: 'trainingIndexCtrl',
       }) 
 	   .state('weekly', {
-		 url: "/weekly",
+		 url: "/weekly_workout",
 		   templateUrl: 'templates/weeklyWorkouts.html',
 		   controller: 'WeeklyCtrl',
 		   controllerAs: 'weekly'
@@ -44,7 +44,7 @@ angular
             controller: 'ChestCtrl',
             controllerAs: 'chest'
        })
-        .state('shoulder', {
+        .state('shoulders', {
            url: "/shoulders",
              templateUrl:'templates/shoulderPage.html',
              controller: 'ShoulderCtrl',
