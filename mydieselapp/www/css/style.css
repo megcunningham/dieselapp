@@ -16,7 +16,7 @@
 	border-radius: 2px;
 	border-style: ridge;
 	border-color: red;
-	
+
 }
 
 body {
@@ -29,4 +29,6 @@ h3 {
 	text-align: center;
 }
 
-
+.highlight_row {
+	background-color: green;
+}

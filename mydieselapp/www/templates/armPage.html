@@ -1,26 +1,20 @@
 <ion-scroll zooming="false" has-bouncing="true" direction="xy">
-	<!-- <div class="row">
-		<div class="col">
-			<img class="img-responsive static-img" src="src/images/gym.jpg" alt="gym">
-		</div>
-	</div> -->
-<!-- <div class="arm-body">
-	<div class="row responsive">
-		<div class="col">
-			<ion-list>
-				<ion-item>
-				<h3> ARMS </h3>
-			</ion-item>
-		</ion-list>
+
+<h3 class="landing-welcome"> Arms Collection </h3>
+		<div class="row">
+			<div class="col">
+		<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button> -->
+				<ion-list>
+					<ion-item ng-repeat="workout in arm.Arms" ng-class='{"highlight_row": arm.selectedWorkout.workout_name === workout.workout_name}' ng-click="arm.selectExercise(workout)">{{workout.workout_name}}</ion-item>
+				</ion-list>
 			</div>
 		</div>
-	</div> -->
-		<!-- <div class="row responsive">
-			<div class="col">
-				<ion-list>
-					<ion-item ng-repeat="arm.listArms()">
-					arms
-					</ion-item>
+
+		<pre>
+			{{arm.selectedWorkout.exercise | json}}
+		</pre>
+
+
 					<ion-item ng-click="showExercises = ! showExercises">
 					{{workout.WORKOUT}}
 				</ion-item>
@@ -28,23 +22,15 @@
 			</div>
 		</div>
 </div>  -->
-				
-				
-	<h3 class="landing-welcome"> Arms Collection </h3>			
-				
-				
-			<div ng-model="arm.Arms">	
-			<!-- <button class="button button-large" ng-click="arm.listArms()"> Arms Collection </button> -->
-					<ion-list class="arm-list" ng-repeat="(Arms, workout_name) in Arms.exercise">
-						<ion-item>{{Arms.workout_name}}</ion-item>
-					</ion-list>
+
+
 						<!-- <li class="list-group-item results-button" ng-click="showExercises = ! 							showExercises">{{workout.WORKOUT}}</li>
 							<ul ng-show="showExercises">
 								<li ng-repeat="(id, exercise) in workout.EXERCISES"> -->
 					  			<!-- <div class="row">
 					  				<div class="well well-sm col">
 										<table class="table table-bordered">
-										<tbody>
+									<tbody>
 											<tr class="danger"><th>Exercise</th>
 																<th> Sets </th>
 																<th> # of Reps </th>
@@ -57,13 +43,13 @@
 												<td>{{exercise.NOTES}}</td>
 											</tr>
 										</tbody> -->
-					 			</li>
-							</ul>
+					 			<!-- </li>
+							</ul> -->
 			 		  					<!-- </table>
 			 		  			</div>
 			 		  		</div> -->
-		 			</li>
+		 			<!-- </li>
 			</ul>
 		</div>
-	</div>
+	</div> -->
 </ion-scroll>

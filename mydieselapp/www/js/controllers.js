@@ -26,15 +26,18 @@ angular
 
 .controller('ArmCtrl', function(Pump, $scope) {
      var vm = this;
-     vm.deezArms = function () { 
+     vm.deezArms = function () {
      	Pump.getArms()
 			.then(function(response) {
-				vm.Arms = response;
+				vm.Arms = response.data;
 				console.log('response', response)
 			});
      };
 	 vm.deezArms();
-	 
+
+vm.selectExercise = function (workout) {
+  vm.selectedWorkout = workout;
+};
    //   vm.listArms = function() {
    //     var ref = ('Backend' + 'arms');
    // 	   console.log('i made it this far');

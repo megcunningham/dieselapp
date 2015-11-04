@@ -28,6 +28,10 @@ angular
 	
 	this.getWeekly = function () {
 	  return $http.get(Backend.url + '/weekly_workout');
+	},
+	
+	this.getNames = function () {
+	  return $http.get(Backend.url + '/search');
 	};
 	
 	return this;
