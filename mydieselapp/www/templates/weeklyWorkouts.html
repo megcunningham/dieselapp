@@ -1,9 +1,9 @@
 <ion-scroll zooming="false" has-bouncing="true" direction="xy">
-			<div class="row" ng-click="">
-				<div class="col">
-					<div ng-repeat="workout in weekly.Weekly">
-					<!-- <h3 class="landing-welcome"> Workouts for the week of: {{workout.[0].week_of}}</h3> -->
-						<h3>{{weekly.Weekly.week_of}}</h3>
+			<div class="row">
+				<div class="col" ng-model="weekly">
+					<!-- <div ng-bind="weekly.Weekly">
+					<! <h3 class="landing-welcome"> Workouts for the week of: {{workout.[0].week_of}}</h3> -->
+						<!-- <h3>{{weekly.Weekly.week_of}}</h3> -->
 					<div class="weekly" ng-repeat="workout in weekly.Weekly" >
 						<h4 class="num-days"> Days per week:	{{workout.days}}</h4>
 						<hr>

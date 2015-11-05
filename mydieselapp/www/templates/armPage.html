@@ -3,21 +3,36 @@
 <h3 class="landing-welcome"> Arms Collection </h3>
 		<div class="row">
 			<div class="col">
-				<ion-list>
-					<ion-item class="workout-names" ng-repeat="workout in arm.Arms"
+					<button class="button button-block" aria-label="Toggle ngShow"
+					ng-repeat="workout in arm.Arms"
 					ng-class='{"highlight_row": arm.selectedWorkout.workout_name === workout.workout_name}'
-					ng-click="arm.selectedWorkout(workout)" ng-click="showExercises = ! showExercises">{{workout.workout_name}}</ion-item>
-							<div class="row" ng-repeat="exercise in arm.Arms">
-								<div class="col" ng-show="showExercises">
-									<p>EXERCISE:{{arm.selectedWorkout.exercise}}</p>
-									<p>NO. OF SETS:{{workout.number_of_sets}}</p>
-									<p>WEIGHT: {{workout.weight}}<p>
-									<p>REPS: {{workout.reps}}</p>
-									<p>NOTES: {{workout.notes}}</p>
-								</ion-list>
-						</div>
+					ng-click="arm.deezArms(workout)">{{workout.workout_name}}
+					</button>
+					<div ng-show="arm.workout" ng-repeat="exercise in arm.workout.exercise">
+							<p>EXERCISE:{{exercise.exercise}}</p>
+							<p>NO. OF SETS:{{exercise.number_of_sets}}</p>
+							<p>WEIGHT: {{exercise.weight}}</p>
+							<p>REPS: {{exercise.reps}}</p>
+							<p>NOTES: {{exercise.notes}}</p>
+					</div>
 			</div>
-		</div>
+	</div>
+
+	<!-- Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br/>
+<div>
+  Show:
+  <div class="check-element animate-hide" ng-show="checked">
+    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+  </div>
+</div>
+<div>
+  Hide:
+  <div class="check-element animate-hide" ng-hide="checked">
+    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+  </div>
+</div> -->
+
+	<!-- class="workout-names" -->
 		<!-- ng-click="showExercises = ! showExercises" -->
  <!-- ng-click="arm.selectExercise(workout)" -->
 		<!-- <pre>

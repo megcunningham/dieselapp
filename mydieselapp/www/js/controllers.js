@@ -34,27 +34,33 @@ angular
       .then(function(response) {
         vm.Search = response.data;
         console.log('response', response)
-      })
+      });
     vm.showExercises = true;
-  }
+  };
   vm.searchNames();
 })
 
 
 .controller('ArmCtrl', function(Pump, $scope) {
-     var vm = this;
-     vm.deezArms = function () {
-     	Pump.getArms()
-			.then(function(response) {
-				vm.Arms = response.data;
-				console.log('response', response)
-			});
-     };
-	 vm.deezArms();
+  var vm = this;
 
-  vm.selectExercise = function (workout) {
-    vm.selectedWorkout = workout;
-  };
+  getData();
+
+   vm.deezArms = function (workout) {
+     if (workout === vm.workout) {
+       vm.workout = null;
+     } else {
+       vm.workout = workout;
+     }
+   };
+
+  function getData() {
+    Pump.getArms()
+    .then(function(response) {
+      vm.Arms = response.data;
+      console.log('response', response)
+    });
+  }
 
 })
 

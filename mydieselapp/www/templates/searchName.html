@@ -6,14 +6,17 @@
 		    <i class="icon ion-ios-search placeholder-icon"></i>
 		    <input class="search-box" type="search" placeholder="Search" ng-model="searchTerm">
 		  </label>
-		  <!-- <button class="button button-dark" ng-click="showExercises = ! showExercises"> -->
 		  <button class="button button-dark" ng-click="search.searchNames()">
 		    Find
 		  </button>
 			<!-- <div class="names" ng-repeat="workout in search.Search | objToArr | orderBy:'workout_name' | filter:search"> -->
-			<div class="names" ng-repeat="workout in search.Search | orderBy:'workout_name' | filter:searchTerm ">
-				<a ng-show="search.showExercises">{{workout.workout_name}}</a>
-			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col">
+		<div class="names" ng-repeat="workout in search.Search | orderBy:'workout_name' | filter:searchTerm ">
+			<ion-item ng-show="search.showExercises">{{workout.workout_name}}</ion-item>
 		</div>
 	</div>
 </div>
