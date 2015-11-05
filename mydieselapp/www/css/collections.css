@@ -31,6 +31,7 @@
 .search {
   text-shadow: 1px 1px grey;
   background-color: gainsboro;
+  border-color: black;
 }
 .search-box {
   border-color: black;

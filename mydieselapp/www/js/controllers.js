@@ -35,7 +35,9 @@ angular
         vm.Search = response.data;
         console.log('response', response)
       })
+    vm.showExercises = true;
   }
+  vm.searchNames();
 })
 
 
