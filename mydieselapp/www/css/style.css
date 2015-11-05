@@ -1,6 +1,7 @@
 /* Empty. Add your own CSS if you like */
 @import url(/css/trainingIndex.css);
 @import url(/css/landing.css);
+@import url(/css/collections.css);
 
 .image {
 	border-radius:15px;
@@ -30,5 +31,5 @@ h3 {
 }
 
 .highlight_row {
-	background-color: green;
+	background-color: seashell;
 }

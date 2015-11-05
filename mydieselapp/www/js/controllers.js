@@ -16,11 +16,26 @@ angular
 	vm.weeklyWorkouts = function() {
 		Pump.getWeekly()
 			.then(function(response) {
-				vm.Weekly = response;
+				vm.Weekly = response.data;
 				console.log('response', response);
 			});
 	};
 	vm.weeklyWorkouts();
+
+  vm.showWeekly = function (workout) {
+    vm.seeWorkout = workout;
+  };
+})
+
+.controller('SearchCtrl', function(Pump, $scope) {
+  var vm = this;
+  vm.searchNames = function() {
+    Pump.getNames()
+      .then(function(response) {
+        vm.Search = response.data;
+        console.log('response', response)
+      })
+  }
 })
 
 
@@ -35,16 +50,10 @@ angular
      };
 	 vm.deezArms();
 
-vm.selectExercise = function (workout) {
-  vm.selectedWorkout = workout;
-};
-   //   vm.listArms = function() {
-   //     var ref = ('Backend' + 'arms');
-   // 	   console.log('i made it this far');
-   //     ref.once('value', function(dataSnapshot) {
-   //     vm.completeArmsObj = dataSnapshot.val();
-   //    });
-   // }
+  vm.selectExercise = function (workout) {
+    vm.selectedWorkout = workout;
+  };
+
 })
 
 .controller('BackCtrl', function(Pump, $scope) {

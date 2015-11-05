@@ -1,0 +1,23 @@
+<ion-scroll zooming="false" has-bouncing="true" direction="xy">
+
+<h3 class="landing-welcome"> Leg Collection </h3>
+		<div class="row">
+			<div class="col">
+				<ion-list>
+					<ion-item class="workout-names" ng-repeat="workout in legs.Legs"
+					ng-class='{"highlight_row": legs.selectedWorkout.workout_name === workout.workout_name}'
+					ng-click="back.selectExercise(workout)">{{workout.workout_name}}</ion-item>
+							<div class="row" ng-repeat="exercise in legs.Legs" ng-click="showExercises = ! showExercises">
+								<div class="col" ng-show="showExercises">
+								<ion-list>
+									<ion-item>EXERCISE:{{workout.exercise}}</ion-item>
+									<ion-item>NO. OF SETS:{{workout.number_of_sets}}</ion-item>
+									<ion-item>WEIGHT: {{workout.weight}}</ion-item>
+									<ion-item>REPS: {{workout.reps}}</ion-item>
+									<ion-item>NOTES: {{workout.notes}}</ion-item>
+								</ion-list>
+						</div>
+				</ion-list>
+			</div>
+		</div>
+</ion-scroll>

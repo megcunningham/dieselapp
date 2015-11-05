@@ -1,0 +1,41 @@
+.workout-names {
+  font-family: 'Anton', sans-serif;
+  text-shadow: 1px 2px lightgrey;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 4px 4px 2px black;
+
+}
+
+.weekly {
+  background-color: gainsboro;
+  border-radius: 3px;
+  box-shadow: 4px 4px 2px black;
+}
+
+.num-days {
+  font-family: 'Anton', sans-serif;
+  /*text-shadow: 1px 1px rgb(184, 0, 0);*/
+  /*background-color: gainsboro;*/
+  padding: 10px;
+  margin:3px;
+}
+
+.names {
+  /*background-color: seashell;*/
+  font-weight: bolder;
+  /*font-family: 'Special Elite', cursive;*/
+  padding: 10px;
+}
+
+.search {
+  text-shadow: 1px 1px grey;
+  background-color: gainsboro;
+}
+.search-box {
+  border-color: black;
+}
+
+hr {
+  color: black;
+}

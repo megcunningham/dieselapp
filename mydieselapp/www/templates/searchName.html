@@ -1,10 +1,18 @@
-<div class="row">
+<ion-scroll zooming="false" has-bouncing="true" direction="xy">
+<div class"row">
 	<div class="col">
-		<h1> Search by Workout Name </h1>
-			<input placeholder="Search" ng-model="query">
-
-		  <div class="names" (ng-repeat="(id, person) in main.people | objToArr | orderBy:'workout_name' | filter:query")>
-		    <a>(href="#/people/{{person._id}}")</a>
-		  </div>
+		<div class="search bar bar-header item-input-inset">
+		  <label class="item-input-wrapper">
+		    <i class="icon ion-ios-search placeholder-icon"></i>
+		    <input class="search-box" type="search" placeholder="Search">
+		  </label>
+		  <button class="button button-dark" ng-click="showExercises = ! showExercises">
+		    Enter
+		  </button>
+			<div class="names" (ng-repeat="workout in search.Search | objToArr | orderBy:'workout_name' | filter:search")>
+				<a ng-show="showExercises">{{workout.workout_name}}</a>
+			</div>
+		</div>
 	</div>
 </div>
+</ion-scroll>

@@ -19,13 +19,19 @@ angular
         url: "/index",
           templateUrl: 'templates/trainingIndex.html',
           controller: 'trainingIndexCtrl',
-      }) 
+      })
 	   .state('weekly', {
 		 url: "/weekly_workout",
 		   templateUrl: 'templates/weeklyWorkouts.html',
 		   controller: 'WeeklyCtrl',
 		   controllerAs: 'weekly'
-	  })  
+	  })
+    .state('search', {
+      url: "/search",
+      templateUrl: 'templates/SearchName.html',
+      controller: 'SearchCtrl',
+      controllerAs: 'search'
+   })
        .state('arms', {
          url: "/arms",
            templateUrl:'templates/armPage.html',
