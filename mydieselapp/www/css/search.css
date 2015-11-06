@@ -2,9 +2,9 @@
 	border-radius: 2px;
 	box-shadow: 4px 4px 2px black;
 	margin-bottom: 15px;
-	border-color: gray;
+	border-color: black;
   color: rgb(184, 0, 0);
-  text-shadow: 2px 1px seashell;
+  text-shadow: 2px 1px white;
   border-width: 2px;
   text-align: center;
   font-family: 'Anton', sans-serif;
@@ -13,8 +13,8 @@
 }
 
 .search {
-  text-shadow: 1px 1px grey;
-  background-color: grey;
+  text-shadow: 1px 1px black;
+  background-color: dimgray;
   border-color: black;
   box-shadow: 4px 4px 2px black;
 }
@@ -24,8 +24,10 @@
 
 .exercise-tbl {
   background-color: gray;
-  box-shadow: 4px 4px 2px black;
+  /*box-shadow: 4px 4px 2px black;*/
   border-radius: 2px;
+  border-color: black;
+  border-width: medium;
 }
 
 .bold {

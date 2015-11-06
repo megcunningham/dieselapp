@@ -1,7 +1,7 @@
 angular
   .module('dieselApp')
 
-// controllers - placing factory cb to be viewed
+// controllers - factory cb to be viewed
 
 .controller('trainingIndexCtrl', function() {
 	var vm = this;
@@ -63,11 +63,17 @@ angular
   getData();
 
    vm.deezArms = function (workout) {
-     if (workout === vm.workout) {
-       vm.workout = null;
+     if (vm.shownGroup && vm.shownGroup.workout_name && vm.isGroupShown(workout)) {
+       vm.shownGroup = null;
      } else {
-       vm.workout = workout;
+       vm.shownGroup = workout;
      }
+   };
+
+   vm.isGroupShown = function(workout) {
+     if(workout && vm.shownGroup && vm.shownGroup.workout_name) {
+       return vm.shownGroup.workout_name === workout.workout_name;
+     } else { return false; }
    };
 
   function getData() {
@@ -81,54 +87,111 @@ angular
 
 .controller('BackCtrl', function(Pump, $scope) {
      var vm = this;
-     vm.datBack = function () {
+
+     getData();
+
+     vm.datBack = function (workout) {
+     if (vm.shownGroup && vm.shownGroup.workout_name && vm.isGroupShown(workout)) {
+       vm.shownGroup = null;
+     } else {
+       vm.shownGroup = workout;
+     }
+   };
+
+   vm.isGroupShown = function(workout) {
+     if(workout && vm.shownGroup && vm.shownGroup.workout_name) {
+       return vm.shownGroup.workout_name === workout.workout_name;
+     } else { return false; }
+   };
+
+    function getData() {
      	Pump.getBack()
 			.then(function(response) {
-				vm.Back = response;
+				vm.Back = response.data;
 				console.log('response', response)
 			});
-	 };
-	 vm.datBack();
-
+	 }
 })
 
 .controller('ChestCtrl', function(Pump, $scope) {
      var vm = this;
 
-     vm.disChest = function () {
+     getData();
+
+     vm.disChest = function (workout) {
+       if (vm.shownGroup && vm.shownGroup.workout_name && vm.isGroupShown(workout)) {
+         vm.shownGroup = null;
+       } else {
+         vm.shownGroup = workout;
+       }
+     };
+
+     vm.isGroupShown = function(workout) {
+       if(workout && vm.shownGroup && vm.shownGroup.workout_name) {
+         return vm.shownGroup.workout_name === workout.workout_name;
+       } else { return false; }
+     };
+
+    function getData() {
 	  	Pump.getChest()
 			.then(function(response) {
-				vm.Chest = response;
+				vm.Chest = response.data;
 				console.log('response', response)
 			});
-	 };
-	 vm.disChest();
-
+	 }
 })
 
 .controller('LegCtrl', function(Pump, $scope) {
      var vm = this;
 
-     vm.demLegs = function () {
+     getData();
+     vm.demLegs = function (workout) {
+       if (vm.shownGroup && vm.shownGroup.workout_name && vm.isGroupShown(workout)) {
+         vm.shownGroup = null;
+       } else {
+         vm.shownGroup = workout;
+       }
+     };
+
+     vm.isGroupShown = function(workout) {
+       if(workout && vm.shownGroup && vm.shownGroup.workout_name) {
+         return vm.shownGroup.workout_name === workout.workout_name;
+       } else { return false; }
+     };
+
+    function getData() {
 	  	Pump.getLegs()
 			.then(function(response) {
-				vm.Legs = response;
+				vm.Legs = response.data;
 				console.log('response', response)
 			});
-	 };
-	 vm.demLegs();
+	 }
 })
 
 .controller('ShoulderCtrl', function(Pump, $scope) {
      var vm = this;
 
-     vm.doesShoulders = function () {
+     getData();
+
+     vm.doesShoulders = function (workout) {
+       if (vm.shownGroup && vm.shownGroup.workout_name && vm.isGroupShown(workout)) {
+         vm.shownGroup = null;
+       } else {
+         vm.shownGroup = workout;
+       }
+     };
+
+     vm.isGroupShown = function(workout) {
+       if(workout && vm.shownGroup && vm.shownGroup.workout_name) {
+         return vm.shownGroup.workout_name === workout.workout_name;
+       } else { return false; }
+     };
+
+    function getData() {
 	  	Pump.getShoulders()
 			.then(function(response) {
-				vm.Shoulders = response;
+				vm.Shoulders = response.data;
 				console.log('response', response)
 			});
-	 };
-	 vm.doesShoulders();
-
+	 }
 })

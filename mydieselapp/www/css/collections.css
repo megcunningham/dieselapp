@@ -12,23 +12,21 @@
     font-size: 25px;
     background-image: url('/img/blackdiamondplate.jpeg');
 }
-.exercise {
-  background-color: gainsboro;
+/* this css is also for search page results */
+.exercise-tbl {
+  background-color: gray;
+  /*box-shadow: 4px 4px 2px black;*/
+  border-radius: 2px;
+  border-color: black;
+  border-width: medium;
 }
-
-/*.list .item.item-accordion {
-  line-height: 38px;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: 0.09s all linear;
+.bold {
+  color: red;
+  text-shadow: 1px 1px black;
 }
-.list .item.item-accordion.ng-hide {
-  line-height: 0px;
+.detail {
+  color:black;
 }
-.list .item.item-accordion.ng-hide-add,
-.list .item.item-accordion.ng-hide-remove {
-  display: block !important;
-}*/
 
 /* weekly workouts */
 .weekly {
@@ -44,8 +42,6 @@
   margin:3px;
 }
 
-/* on the search page */
-
 .names {
   text-align: center;
   /*background-color: grey;*/
@@ -54,7 +50,4 @@
   border-radius: 2px;
   font-family: 'Special Elite', cursive;
   padding: 10px;
-}
-hr {
-  color: black;
 }

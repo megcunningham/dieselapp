@@ -15,31 +15,31 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col">
-		<ion-list>
-			<div ng-repeat="workout in search.Search | orderBy:'workout_name' | filter:searchTerm ">
-				<ion-item class="search-button"
-									ng-show="search.showExercises"
-									ng-click="search.searchNames(workout)">
-									{{workout.workout_name}}
-				</ion-item>
-				<ion-item class="exercise-tbl"
-									ng-show="search.isGroupShown(workout)"
-									ng-repeat="exercise in workout.exercise">
-					<p> <strong class="bold">Exercise:</strong>
-						 <div class="detail">{{exercise.exercise}}</div></p>
-					<p><strong class="bold"> No. of sets:</strong>
-						 <div class="detail">{{exercise.number_of_sets}}</div></p>
-					<p> <strong class="bold">Weight:</strong>
-						 <div class="detail">{{exercise.weight}}</div> </p>
-					<p> <strong class="bold">Reps:</strong>
-						 <div class="detail">{{exercise.reps}}</div> </p>
-					<p> <strong class="bold">Notes: </strong>
-						 <div class="detail">{{exercise.notes}}</div></p>
-				</ion-item>
-		 </div>
-	</ion-list>
-</div>
+		<div class="col">
+			<ion-list>
+				<div ng-repeat="workout in search.Search | orderBy:'workout_name' | filter:searchTerm ">
+					<ion-item class="search-button"
+										ng-show="search.showExercises"
+										ng-click="search.searchNames(workout)">
+										{{workout.workout_name}}
+					</ion-item>
+					<ion-item class="exercise-tbl"
+										ng-show="search.isGroupShown(workout)"
+										ng-repeat="exercise in workout.exercise">
+						<p> <strong class="bold">Exercise:</strong>
+							 <div class="detail">{{exercise.exercise}}</div></p>
+						<p><strong class="bold"> No. of sets:</strong>
+							 <div class="detail">{{exercise.number_of_sets}}</div></p>
+						<p> <strong class="bold">Weight:</strong>
+							 <div class="detail">{{exercise.weight}}</div> </p>
+						<p> <strong class="bold">Reps:</strong>
+							 <div class="detail">{{exercise.reps}}</div> </p>
+						<p> <strong class="bold">Notes: </strong>
+							 <div class="detail">{{exercise.notes}}</div></p>
+					</ion-item>
+			 </div>
+		</ion-list>
+	</div>
 </div>
 
 </ion-scroll>

@@ -1,6 +1,4 @@
 <ion-scroll zooming="false" has-bouncing="true" direction="xy">
-
-<ion-content>
 <h3 class="landing-welcome"> Arms Collection </h3>
 		<div class="row">
 			<div class="col">
@@ -10,66 +8,20 @@
 											ng-click="arm.deezArms(workout)">
 											{{workout.workout_name}}
 						</ion-item>
-						<ion-item class="exercise item-accordion"
-											ng-show="arm.workout"
-											ng-repeat="exercise in arm.workout.exercise">
-							<p> <strong>Exercise:</strong> {{exercise.exercise}}</p>
-							<p> <strong> No. of sets:</strong> {{exercise.number_of_sets}}</p>
-							<p> <strong>Weight:</strong> {{exercise.weight}} </p>
-							<p> <strong>Reps:</strong> {{exercise.reps}} </p>
-							<p> <strong>Notes: </strong>{{exercise.notes}}</p>
+						<ion-item class="exercise-tbl"
+											ng-show="arm.isGroupShown(workout)"
+											ng-repeat="exercise in workout.exercise">
+							<p> <strong class="bold">Exercise:</strong>
+								<div class="detail"> {{exercise.exercise}}</div></p>
+							<p> <strong class="bold"> No. of sets:</strong>
+								<div class="detail">{{exercise.number_of_sets}}</div></p>
+							<p> <strong class="bold">Weight:</strong>
+								<div class="detail">{{exercise.weight}}</div></p>
+							<p> <strong class="bold">Reps:</strong>
+								<div class="detail"> {{exercise.reps}}</div> </p>
+							<p> <strong class="bold">Notes: </strong>
+								<div class="detail">{{exercise.notes}}</div></p>
 						</ion-item>
 				 </div>
 				</ion-list>
-				<!-- ng-class="{active: isGroupShown(workout)}" -->
-					<!-- <div ng-show="arm.workout" ng-repeat="exercise in arm.workout.exercise">
-							<p>EXERCISE:{{exercise.exercise}}</p>
-							<p>NO. OF SETS:{{exercise.number_of_sets}}</p>
-							<p>WEIGHT: {{exercise.weight}}</p>
-							<p>REPS: {{exercise.reps}}</p>
-							<p>NOTES: {{exercise.notes}}</p>
-					</div>
-			</div>
-	</div> -->
-
-
-      <!-- <ion-list>
-        <div ng-repeat="group in groups">
-          <ion-item class="item-stable"
-                    ng-click="toggleGroup(group)"
-                    ng-class="{active: isGroupShown(group)}">
-              <i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
-            &nbsp;
-            Group {{group.name}}
-          </ion-item>
-          <ion-item class="item-accordion"
-                    ng-repeat="item in group.items"
-                    ng-show="isGroupShown(group)">
-            {{item}}
-          </ion-item>
-        </div>
-      </ion-list> -->
-
-<!-- '{"highlight_row": arm.selectedWorkout.workout_name === workout.workout_name} -->
-	<!-- Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br/>
-<div>
-  Show:
-  <div class="check-element animate-hide" ng-show="checked">
-    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
-  </div>
-</div>
-<div>
-  Hide:
-  <div class="check-element animate-hide" ng-hide="checked">
-    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
-  </div>
-</div> -->
-
-	<!-- class="workout-names" -->
-		<!-- ng-click="showExercises = ! showExercises" -->
- <!-- ng-click="arm.selectExercise(workout)" -->
-		<!-- <pre>
-			{{arm.selectedWorkout.exercise | json}}
-		 </pre> -->
-	 </ion-content>
 </ion-scroll>
