@@ -2,6 +2,7 @@ angular
   .module('dieselApp')
 
 // controllers - factory cb to be viewed
+
 .controller('MainCtrl', function ($scope, $ionicScrollDelegate) {
   $scope.scrollMainToTop = function() {
     $ionicScrollDelegate.$getByHandle('mainScroll').scrollTop([shouldAnimate]);
@@ -62,7 +63,12 @@ angular
   vm.searchNames();
 })
 
-.controller('ArmCtrl', function(Pump, $scope) {
+.controller('ArmCtrl', function(Pump, $scope, $ionicHistory) {
+    $scope.myGoBack = function() {
+      console.log('click');
+      $ionicHistory.goBack();
+    };
+
   var vm = this;
 
   getData();
@@ -199,4 +205,4 @@ angular
 				console.log('response', response)
 			});
 	 }
-})
+ })

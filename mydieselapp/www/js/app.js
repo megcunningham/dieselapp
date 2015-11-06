@@ -8,7 +8,6 @@ angular.module('dieselApp', ['ionic'])
 		// .constant('Backend', {url: 'http://localhost:8000/api'});
 		.constant('Backend', {url: 'https://salty-fjord-3726.herokuapp.com/api'});
 
-
 // .run(function($ionicPlatform) {
 //   $ionicPlatform.ready(function() {
 //     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
