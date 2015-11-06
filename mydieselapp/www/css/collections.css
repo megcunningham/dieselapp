@@ -15,39 +15,17 @@
 /* this css is also for search page results */
 .exercise-tbl {
   background-color: gray;
-  /*box-shadow: 4px 4px 2px black;*/
+  box-shadow: 4px 4px 2px black;
   border-radius: 2px;
   border-color: black;
-  border-width: medium;
+  /*border-width: medium;*/
 }
 .bold {
-  color: red;
-  text-shadow: 1px 1px black;
+  color: rgb(184, 0, 0);
+  text-shadow: 1px 1px gray;
 }
 .detail {
   color:black;
-}
-
-/* weekly workouts */
-.weekly {
-  background-color: gainsboro;
-  border-radius: 3px;
-  box-shadow: 4px 4px 2px black;
-}
-.num-days {
-  font-family: 'Anton', sans-serif;
-  /*text-shadow: 1px 1px rgb(184, 0, 0);*/
-  /*background-color: gainsboro;*/
-  padding: 10px;
-  margin:3px;
-}
-
-.names {
-  text-align: center;
-  /*background-color: grey;*/
-  box-shadow: 4px 4px 2px black;
-  font-weight: bolder;
-  border-radius: 2px;
+  font-weight: bold;
   font-family: 'Special Elite', cursive;
-  padding: 10px;
 }

@@ -5,12 +5,10 @@
 					<! <h3 class="landing-welcome"> Workouts for the week of: {{workout.[0].week_of}}</h3> -->
 						<!-- <h3>{{weekly.Weekly.week_of}}</h3> -->
 					<div class="weekly" ng-repeat="workout in weekly.Weekly" >
-						<h4 class="num-days"> Days per week:	{{workout.days}}</h4>
-						<hr>
-					  <div class="names">
-							<p ng-repeat="workout in workout.workouts">{{workout}}</p>
-						</p>
-
+						<h3 class="num-days"> Days per week:	{{workout.days}}</h3>
+						<!-- <hr> -->
+					  <div>
+							<h4 class="names" ng-repeat="workout in workout.workouts">{{workout}}</h4>
 					</div>
 				</div>
 			</div>

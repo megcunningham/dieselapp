@@ -1,4 +1,4 @@
-<ion-scroll zooming="false" has-bouncing="true" direction="xy">
+<ion-scroll zooming="false" has-bouncing="true" direction="xy" style="width: auto; height: 500px;">
 <h3 class="landing-welcome"> Arms Collection </h3>
 		<div class="row">
 			<div class="col">
@@ -12,7 +12,7 @@
 											ng-show="arm.isGroupShown(workout)"
 											ng-repeat="exercise in workout.exercise">
 							<p> <strong class="bold">Exercise:</strong>
-								<div class="detail"> {{exercise.exercise}}</div></p>
+								<div class="detail">{{exercise.exercise}}</div></p>
 							<p> <strong class="bold"> No. of sets:</strong>
 								<div class="detail">{{exercise.number_of_sets}}</div></p>
 							<p> <strong class="bold">Weight:</strong>

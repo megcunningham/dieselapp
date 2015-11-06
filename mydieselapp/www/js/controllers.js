@@ -2,6 +2,11 @@ angular
   .module('dieselApp')
 
 // controllers - factory cb to be viewed
+.controller('MainCtrl', function ($scope, $ionicScrollDelegate) {
+  $scope.scrollMainToTop = function() {
+    $ionicScrollDelegate.$getByHandle('mainScroll').scrollTop([shouldAnimate]);
+  }
+})
 
 .controller('trainingIndexCtrl', function() {
 	var vm = this;

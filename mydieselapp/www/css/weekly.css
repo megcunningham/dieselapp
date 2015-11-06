@@ -1,0 +1,22 @@
+/* weekly workouts */
+.weekly {
+  background-color: gray;
+  border-radius: 3px;
+  box-shadow: 4px 4px 2px black;
+}
+.num-days {
+  color:black;
+  text-shadow: 1px 1px gainsboro;
+  font-family: 'Anton', sans-serif;
+  padding: 10px;
+  margin:3px;
+}
+
+.names {
+  text-align: center;
+  text-shadow: 1px 1px rgb(184, 0, 0);
+  font-weight: bolder;
+  border-radius: 2px;
+  font-family: 'Special Elite', cursive;
+  padding: 10px;
+}
