@@ -29,7 +29,24 @@ angular
 
 .controller('SearchCtrl', function(Pump, $scope) {
   var vm = this;
-  vm.searchNames = function() {
+
+  getData();
+
+  vm.searchNames = function(workout) {
+    if (vm.shownGroup && vm.shownGroup.workout_name && vm.isGroupShown(workout)) {
+      vm.shownGroup = null;
+    } else {
+      vm.shownGroup = workout;
+    }
+  };
+
+  vm.isGroupShown = function(workout) {
+    if(workout && vm.shownGroup && vm.shownGroup.workout_name) {
+      return vm.shownGroup.workout_name === workout.workout_name;
+    } else { return false; }
+  };
+
+  function getData() {
     Pump.getNames()
       .then(function(response) {
         vm.Search = response.data;
@@ -39,7 +56,6 @@ angular
   };
   vm.searchNames();
 })
-
 
 .controller('ArmCtrl', function(Pump, $scope) {
   var vm = this;
@@ -60,8 +76,7 @@ angular
       vm.Arms = response.data;
       console.log('response', response)
     });
-  }
-
+  };
 })
 
 .controller('BackCtrl', function(Pump, $scope) {

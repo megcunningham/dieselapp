@@ -1,0 +1,52 @@
+.search-button {
+	border-radius: 2px;
+	box-shadow: 4px 4px 2px black;
+	margin-bottom: 15px;
+	border-color: gray;
+  color: rgb(184, 0, 0);
+  text-shadow: 2px 1px seashell;
+  border-width: 2px;
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+  background-image: url('/img/blackdiamondplate.jpeg');
+}
+
+.search {
+  text-shadow: 1px 1px grey;
+  background-color: grey;
+  border-color: black;
+  box-shadow: 4px 4px 2px black;
+}
+.search-box {
+  border-color: black;
+}
+
+.exercise-tbl {
+  background-color: gray;
+  box-shadow: 4px 4px 2px black;
+  border-radius: 2px;
+}
+
+.bold {
+  color: red;
+  text-shadow: 1px 1px black;
+}
+
+.detail {
+  color:black;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}

@@ -1,4 +1,5 @@
-<ion-scroll zooming="false" has-bouncing="true" direction="xy">
+
+<ion-scroll zooming="false" has-bouncing="true" direction="y" direction="x" class="available-scroller">
 <div class"row">
 	<div class="col">
 		<div class="search bar bar-header item-input-inset">
@@ -15,9 +16,52 @@
 </div>
 <div class="row">
 	<div class="col">
-		<div class="names" ng-repeat="workout in search.Search | orderBy:'workout_name' | filter:searchTerm ">
-			<ion-item ng-show="search.showExercises">{{workout.workout_name}}</ion-item>
-		</div>
-	</div>
+		<ion-list>
+			<div ng-repeat="workout in search.Search | orderBy:'workout_name' | filter:searchTerm ">
+				<ion-item class="search-button"
+									ng-show="search.showExercises"
+									ng-click="search.searchNames(workout)">
+									{{workout.workout_name}}
+				</ion-item>
+				<ion-item class="exercise-tbl"
+									ng-show="search.isGroupShown(workout)"
+									ng-repeat="exercise in workout.exercise">
+					<p> <strong class="bold">Exercise:</strong>
+						 <div class="detail">{{exercise.exercise}}</div></p>
+					<p><strong class="bold"> No. of sets:</strong>
+						 <div class="detail">{{exercise.number_of_sets}}</div></p>
+					<p> <strong class="bold">Weight:</strong>
+						 <div class="detail">{{exercise.weight}}</div> </p>
+					<p> <strong class="bold">Reps:</strong>
+						 <div class="detail">{{exercise.reps}}</div> </p>
+					<p> <strong class="bold">Notes: </strong>
+						 <div class="detail">{{exercise.notes}}</div></p>
+				</ion-item>
+		 </div>
+	</ion-list>
 </div>
+</div>
+
 </ion-scroll>
+
+<!-- <div class="row">
+	<div class="col">
+		<ion-list>
+			<div ng-repeat="workout in arm.Arms">
+				<ion-item class="item-stable"
+									ng-click="arm.deezArms(workout)">
+									<i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>
+								&nbsp;
+									{{workout.workout_name}}
+				</ion-item>
+				<ion-item class="item-accordion"
+									ng-show="arm.workout"
+									ng-repeat="exercise in arm.workout.exercise">
+					<p> Exercise: {{exercise.exercise}}</p>
+					<p> No. of sets: {{exercise.number_of_sets}}</p>
+					<p> Weight: {{exercise.weight}} </p>
+					<p> Reps: {{exercise.reps}} </p>
+					<p> Notes: {{exercise.notes}}</p>
+				</ion-item>
+		 </div>
+		</ion-list> -->
