@@ -21,3 +21,8 @@
 .search-box {
   border-color: black;
 }
+
+.back {
+margin-right: 7px;
+margin-left: -2px;
+}

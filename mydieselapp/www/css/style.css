@@ -20,11 +20,10 @@ body {
 	background-color: rgb(184, 0, 0);
 }
 
-h3 {
+/*h3 {
 	font-family: 'Anton', sans-serif;
-	/*text-shadow: 1px 1px black;*/
 	text-align: center;
-}
+}*/
 
 .highlight_row {
 	background-color: seashell;

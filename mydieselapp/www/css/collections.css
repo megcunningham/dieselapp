@@ -29,3 +29,21 @@
   font-weight: bold;
   font-family: 'Special Elite', cursive;
 }
+
+.ion-chevron-left {
+  /*margin-left: -80px;*/
+}
+h6  {
+  font-family: 'Special Elite', cursive;
+  text-shadow: 1px 1px lightgrey;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: -7px;
+  margin-bottom: -1px;
+}
+.col-header {
+  font-family: 'Special Elite', cursive;
+  text-shadow: 1px 1px lightgrey;
+  text-align: center;
+  font-weight: bolder;
+}

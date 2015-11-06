@@ -13,12 +13,14 @@ angular
 	   .state('landing', {
 		 url: "/",
 		   templateUrl: 'templates/landing.html',
-		   controller: 'LandingCtrl'
+		   controller: 'LandingCtrl',
+       controllerAs: 'landing'
 	  })
       .state('index', {
         url: "/index",
           templateUrl: 'templates/trainingIndex.html',
           controller: 'trainingIndexCtrl',
+          controllerAs: 'index'
       })
 	   .state('weekly', {
 		 url: "/weekly_workout",
