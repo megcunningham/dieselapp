@@ -65,9 +65,9 @@ angular
 
 .controller('ArmCtrl', function(Pump, $scope, $ionicHistory) {
     $scope.myGoBack = function() {
-      console.log('click');
       $ionicHistory.goBack();
     };
+
 
   var vm = this;
 
