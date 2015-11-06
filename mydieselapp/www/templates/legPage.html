@@ -15,7 +15,7 @@
 											{{workout.workout_name}}
 						</ion-item>
 						<ion-item class="exercise-tbl"
-											ng-show="leg.isGroupShown(workout)"
+											ng-show="legs.isGroupShown(workout)"
 											ng-repeat="exercise in workout.exercise">
 							<p> <strong class="bold">Exercise:</strong>
 								<div class="detail"> {{exercise.exercise}}</div></p>
