@@ -63,11 +63,7 @@ angular
   vm.searchNames();
 })
 
-.controller('ArmCtrl', function(Pump, $scope, $ionicHistory) {
-    $scope.myGoBack = function() {
-      $ionicHistory.goBack();
-    };
-
+.controller('ArmCtrl', function(Pump, $scope) {
 
   var vm = this;
 
