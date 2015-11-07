@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('dieselApp', ['ionic, ngIOS9UIWebViewPatch'])
+angular.module('dieselApp', ['ionic'])
 		// .constant('T_APP', 'https://mobiletrainerapp.firebaseio.com/admin/users/')
 		// .constant('Backend', {url: 'http://localhost:8000/api'});
 		.constant('Backend', {url: 'https://salty-fjord-3726.herokuapp.com/api'});
