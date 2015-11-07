@@ -1,10 +1,5 @@
 {
   "name": "mydieselapp",
-  "app_id": "d36274b3",
-  "proxies": [
-    {
-      "path": "/api",
-      "proxyUrl": "http://localhost:8000"
-    }
-  ]
+  "app_id": "d36274b3"
+
 }
