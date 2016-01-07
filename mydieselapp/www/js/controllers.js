@@ -9,6 +9,30 @@ angular
   }
 })
 
+.controller('AuthCtrl', function() {
+  var vm = this;
+
+  vm.login = function ($rootscope, $scope, $location, Backend, auth) {
+    auth.login(vm.email, vm.password, function(){
+      $location.path('/landing');
+      $scope.$apply();
+    })
+
+  };
+
+  // vm.register = function () {
+  //   console.log('hit register function')
+  //   Auth.register(vm.email, vm.password, function(){
+  //     console.log('you registered');
+  //   });
+  //   var ref = new Firebase(T_APP);
+  //    ref.push({ 'firstname': vm.reg.firstName, 'lastname': vm.reg.lastName, 'trainer' : vm.reg.trainer, 'email': vm.email });
+  // };
+
+
+})
+
+
 .controller('trainingIndexCtrl', function() {
 	var vm = this;
 })

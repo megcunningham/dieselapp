@@ -5,16 +5,22 @@ angular
 	// $httpProvider.defaults.withCredentials = true;
     $stateProvider
      .state('login', {
-        url: "/login",
+        url: "/",
           templateUrl:'templates/login-reg.html',
           controller: 'AuthCtrl',
           controllerAs: 'auth'
       })
+     .state('profile', {
+       url: "/profile",
+         templateUrl:'templates/profile.html',
+         controller: 'ProfileCtrl',
+         controllerAs: 'profile'
+     })
 	   .state('landing', {
-		 url: "/",
-		   templateUrl: 'templates/landing.html',
-		   controller: 'LandingCtrl',
-       controllerAs: 'landing'
+		   url: "/landing",
+		     templateUrl: 'templates/landing.html',
+		     controller: 'LandingCtrl',
+         controllerAs: 'landing'
 	  })
     .state('index', {
       url: "/index",
@@ -23,16 +29,16 @@ angular
         controllerAs: 'index'
     })
 	   .state('weekly', {
-		 url: "/weekly_workout",
-		   templateUrl: 'templates/weeklyWorkouts.html',
-		   controller: 'WeeklyCtrl',
-		   controllerAs: 'weekly'
+		   url: "/weekly_workout",
+		     templateUrl: 'templates/weeklyWorkouts.html',
+		     controller: 'WeeklyCtrl',
+		     controllerAs: 'weekly'
 	  })
     .state('search', {
       url: "/search",
-      templateUrl: 'templates/SearchName.html',
-      controller: 'SearchCtrl',
-      controllerAs: 'search'
+        templateUrl: 'templates/SearchName.html',
+        controller: 'SearchCtrl',
+        controllerAs: 'search'
    })
    .state('arms', {
      url: "/arms",

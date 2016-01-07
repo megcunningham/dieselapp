@@ -1,9 +1,9 @@
- <ion-content>
-    <div class="row">
-      <div class="col team-diesel-img"> 
-        <!-- <img src="img/diesel.png"> --> 
-      </div>
-    </div> 
+
+    <!-- <div class="row">
+      <div class="col team-diesel-img">  -->
+        <!-- <img src="img/diesel.png"> -->
+      <!-- </div>
+    </div>  -->
 
   <div class="row">
       <!-- Login or Register -->
@@ -19,15 +19,17 @@
           <label class="item item-input-wrapper">Password</label>
           <input type="password" ng-model="auth.password" required>
         </div>
-          <button ng-click="auth.login()" type="submit" class="button button-large"> Login </button>
-          <a class="password-link" href=""> Forgot Password </a>
+          <!-- <button ng-click="auth.login()" type="submit" class="button button-large"> Login </button> -->
+          <a class="button" ui-sref="profile"> Login</a>
         </div>
       </div>
+    </div>
+  </div>
 
-        <h1 class="login-header"> REGISTER </h1>
+        <!-- <h1 class="login-header"> REGISTER </h1>
         <h5> * All fields required </h5>
          <div class="list">
-          <label class="item item-input item-stacked-label"> 
+          <label class="item item-input item-stacked-label">
           <span class="input label">First name</span>
           <input type="text" ng-model='auth.reg.firstName' required>
           </label>
@@ -39,16 +41,15 @@
           <span class="inout label"> Your trainer </span>
           <input type="text" ng-model='auth.reg.trainer' required>
           </label>
-          <label class="item item-input item-stacked-label"> 
+          <label class="item item-input item-stacked-label">
           <span class="input label"> Email </span>
           <input type="email" ng-model='auth.email' required>
           </label>
-          <label class="item item-input item-stacked-label"> 
+          <label class="item item-input item-stacked-label">
           <span class="input label"> Password </span>
           <input type="password" ng-model='auth.password' required>
           </label>
           <button ng-click="auth.register()" type="submit" class="button button-large">Sign Up</button>
          </div>
     </div>
-  </div>
-</ion-content>
+  </div> -->
